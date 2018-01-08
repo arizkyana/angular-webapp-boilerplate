@@ -1,0 +1,55 @@
+<ui-view>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Management Menu</h3>
+                    <div class="ibox-tools">
+                        <a ui-sref="app.setting.menu.create" class="btn btn-primary">Create Menu</a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <table id="table-menu" table-menu class="table table-condensed table-striped table-hover">
+
+		                <thead>
+		                <tr>
+		                    <th>No</th>
+		                    <th>Nama</th>
+		                    <th>URL</th>
+		                    <th>Icon</th>
+		                    <th>Parent</th>
+		                    <th>Action</th>
+		                </tr>
+		                </thead>
+		                <tbody>
+		                 
+                        <tr ng-repeat="(key, menu) in menus">
+                            <td>{{ key + 1 }}</td>
+                            <td>
+                                <a ui-sref="app.setting.menu.edit" class="text-primary">
+                                    {{ menu.name }}
+                                </a>
+                            </td>
+                            <td>{{ menu.url }}</td>
+                            <td>{{ menu.icon }}</td>
+                            <td>{{ menu.parent }}</td>
+                            <td>
+
+                               
+
+                                <a class="btn btn-sm btn-danger"
+                                   >
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    
+		                </tbody>
+		            </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ui-view>
