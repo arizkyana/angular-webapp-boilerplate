@@ -1,7 +1,6 @@
 let route = angular.module('foodgasm.route', [
     'ngRoute',
-    'ui.router',
-    'oc.lazyLoad',
+    'ui.router'
 ]);
 route.config([
     '$stateProvider',
@@ -72,7 +71,10 @@ route.config([
                 replace: true,
                 templateUrl: 'views/setting/menu/create.html',
                 resolve: {
-                    loadController: loadController('controllers/setting/menu/create.js')
+                    loadController: loadController([
+                        'models/menu.js',
+                        'controllers/setting/menu/create.js'
+                    ])
                 },
                 controller: 'SettingMenuCreateController'
             })
@@ -81,9 +83,10 @@ route.config([
                 replace: true,
                 templateUrl: 'views/setting/menu/update.html',
                 resolve: {
-                    loadController: ['$ocLazyLoad', function($ocLazyLoad) {
-                        return $ocLazyLoad.load('controllers/setting/menu/update.js')
-                    }]
+                    loadController: loadController([
+                        'models/menu.js',
+                        'controllers/setting/menu/update.js'
+                    ])
                 },
                 controller: 'SettingMenuUpdateController'
             });
@@ -95,8 +98,8 @@ route.config([
 ]);
 
 // loadController
-function loadController(controllers) {
+function loadController(files) {
     return ['$ocLazyLoad', function($ocLazyLoad) {
-        return $ocLazyLoad.load(controllers);
+        return $ocLazyLoad.load(files);
     }];
 }
