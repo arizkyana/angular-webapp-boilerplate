@@ -14,8 +14,7 @@
 
 		                <thead>
 		                <tr>
-		                    <th>No</th>
-		                    <th>Nama</th>
+		                    <th>Name</th>
 		                    <th>URL</th>
 		                    <th>Icon</th>
 		                    <th>Parent</th>
@@ -23,27 +22,7 @@
 		                </tr>
 		                </thead>
 		                <tbody>
-		                 
-                        <tr ng-repeat="(key, menu) in menus">
-                            <td>{{ key + 1 }}</td>
-                            <td>
-                                <a ui-sref="app.setting.menu.edit" class="text-primary">
-                                    {{ menu.name }}
-                                </a>
-                            </td>
-                            <td>{{ menu.url }}</td>
-                            <td>{{ menu.icon }}</td>
-                            <td>{{ menu.parent }}</td>
-                            <td>
-
-                               
-
-                                <a class="btn btn-sm btn-danger"
-                                   >
-                                    <i class="glyphicon glyphicon-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
+		              
                     
 		                </tbody>
 		            </table>
