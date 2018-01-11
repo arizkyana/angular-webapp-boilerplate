@@ -7,12 +7,10 @@
   "dependencies": {
     "http-server": "^0.10.0"
   },
-  "scripts": {
-    "start": "http-server"
-  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
   },
   "author": "",
   "license": "ISC"
