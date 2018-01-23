@@ -8,7 +8,7 @@ route.config([
     '$urlRouterProvider',
     function($stateProvider, $locationProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/app/dashboard');
+        $urlRouterProvider.otherwise('/app/');
 
 
         // routes
@@ -20,12 +20,13 @@ route.config([
 
             })
             .state('app.dashboard', {
-                url: '/dashboard',
+                url: '/',
                 templateUrl: 'views/dashboard/index.html',
                 resolve: {
-                    loadController: ['$ocLazyLoad', function($ocLazyLoad) {
-                        return $ocLazyLoad.load('controllers/dashboard/index.js');
-                    }]
+                    loadController: loadController([
+                        'models/movies.js',
+                        'controllers/dashboard/index.js'
+                    ])
                 },
                 controller: 'DashboardIndexController',
             })
@@ -48,6 +49,7 @@ route.config([
                 url: '/role',
                 templateUrl: 'views/setting/role/index.html',
                 resolve: {
+
                     loadController: ['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load('controllers/setting/role/index.js');
                     }]

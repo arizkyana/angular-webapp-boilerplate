@@ -1,28 +1,29 @@
 {
-  "name": "foodgasm-web-client",
-  "authors": [
-    "arizkyana"
-  ],
-  "description": "foodgasm rebuild web client apps",
-  "main": "index.html",
-  "keywords": [
-    "foodgasm"
-  ],
-  "license": "MIT",
-  "homepage": "http://localhost/foodgasm",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular": "^1.6.8",
-    "oclazyload": "^1.1.0",
-    "angular-resource": "^1.6.8",
-    "angular-route": "^1.6.8",
-    "angular-ui-router": "^1.0.12"
-  }
+    "name": "tvmoviehdonline",
+    "authors": [
+        "arizkyana"
+    ],
+    "description": "Television and Movies Directory",
+    "main": "index.html",
+    "keywords": [
+        "tvmoviehdonline"
+    ],
+    "license": "MIT",
+    "homepage": "http://localhost/tvmoviehdonline",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies":
+    {
+        "angular": "^1.6.8",
+        "oclazyload": "^1.1.0",
+        "angular-resource": "^1.6.8",
+        "angular-route": "^1.6.8",
+        "angular-ui-router": "^1.0.12"
+    }
 }

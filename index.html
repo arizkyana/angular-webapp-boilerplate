@@ -1,70 +1,48 @@
 <!DOCTYPE html>
-<html ng-app="foodgasm">
+<html lang="en" ng-app="foodgasm">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodgasm</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>INSPINIA - Landing Page</title>
+    <!-- Bootstrap core CSS -->
     <link href="themes/css/bootstrap.min.css" rel="stylesheet">
-    <link href="themes/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <!-- datatable -->
-    <link rel="stylesheet" type="text/css" href="themes/css/plugins/dataTables/datatables.min.css">
-    <!-- /datatable -->
-    <!-- select2 -->
-    <link rel="stylesheet" type="text/css" href="themes/css/plugins/select2/select2.min.css">
-    <!-- /select2 -->
+    <!-- Animation CSS -->
     <link href="themes/css/animate.css" rel="stylesheet">
+    <link href="themes/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="themes/css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="themes/css/plugins/slick/slick-theme.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
     <link href="themes/css/style.css" rel="stylesheet">
 </head>
 
-<body class="top-navigation">
-    <div id="wrapper">
-        <div id="page-wrapper" class="gray-bg">
-            <div class="row border-bottom white-bg">
-                <nav class="navbar navbar-static-top" role="navigation">
-                    <div class="navbar-header">
-                        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                            <i class="fa fa-reorder"></i>
-                        </button>
-                        <a href="/" class="navbar-brand">Foodgasm</a>
-                    </div>
-                    <div class="navbar-collapse collapse" id="navbar">
-                        <ul class="nav navbar-nav">
-                            <li ui-sref-active="active">
-                                <a aria-expanded="false" role="button" ui-sref="app.dashboard"> Dashboard </a>
-                            </li>
-                            <li class="dropdown">
-                                <a aria-expanded="false" role="button" class="dropdown-toggle" data-toggle="dropdown"> Setting <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu">
-                                    <li ui-sref-active="active"><a ui-sref="app.setting.user">User</a></li>
-                                    <li ui-sref-active="active"><a ui-sref="app.setting.role">Role</a></li>
-                                    <li ui-sref-active="active"><a ui-sref="app.setting.menu">Menu</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-top-links navbar-right">
-                            <li>
-                                <a href="login.html">
-                            <i class="fa fa-sign-out"></i> Log out
-                        </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="wrapper wrapper-content">
-                <ui-view></ui-view>
-            </div>
-            <div class="footer">
-                <div class="pull-right">
-                    10GB of <strong>250GB</strong> Free.
+<body id="page-top" class="landing-page no-skin-config">
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header navbar-right page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ campaign }}">Sign In / Sign Up</a>
                 </div>
-                <div>
-                    <strong>Copyright</strong> Example Company &copy; 2014-2017
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="page-scroll" href="#page-top">Home</a></li>
+                        <li><a class="page-scroll" href="#movie">Movies</a></li>
+                        <li><a class="page-scroll" href="#tv">TV Show</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
     </div>
+    <ui-view></ui-view>
     <!-- Mainly scripts -->
     <script src="themes/js/jquery-3.1.1.min.js"></script>
     <script src="themes/js/bootstrap.min.js"></script>
@@ -73,17 +51,9 @@
     <!-- Custom and plugin javascript -->
     <script src="themes/js/inspinia.js"></script>
     <script src="themes/js/plugins/pace/pace.min.js"></script>
-    <!-- Flot -->
-    <script src="themes/js/plugins/flot/jquery.flot.js"></script>
-    <script src="themes/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="themes/js/plugins/flot/jquery.flot.resize.js"></script>
-    <!-- ChartJS-->
-    <script src="themes/js/plugins/chartJs/Chart.min.js"></script>
-    <!-- Peity -->
-    <script src="themes/js/plugins/peity/jquery.peity.min.js"></script>
-    <!-- Peity demo -->
-    <script src="themes/js/demo/peity-demo.js"></script>
-    <script type="text/javascript" src="themes/js/plugins/dataTables/datatables.min.js"></script>
+    <script src="themes/js/plugins/wow/wow.min.js"></script>
+    <!-- slick carousel-->
+    <script src="themes/js/plugins/slick/slick.min.js"></script>
     <!-- angular 1  -->
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -94,7 +64,6 @@
     <!-- static load controller apps -->
     <script type="text/javascript" src="controllers/app.route.js"></script>
     <script type="text/javascript" src="controllers/app.controller.js"></script>
-    <!-- /static load controller apps -->
 </body>
 
 </html>

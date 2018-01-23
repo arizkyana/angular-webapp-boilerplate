@@ -1,17 +1,15 @@
 {
-  "name": "foodgasm-web-client",
+  "name": "tvmoviehdonline",
   "version": "1.0.0",
-  "description": "foodgasm rebuild web client apps",
+  "description": "Television and Movies Directory",
   "main": "app.js",
 
   "dependencies": {
     "http-server": "^0.10.0"
   },
-  "scripts": {
-    "start": "http-server"
-  },
   "devDependencies": {},
   "scripts": {
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
